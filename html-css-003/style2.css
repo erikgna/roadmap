@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vh;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    grid-gap: 5px;
+
+    justify-items: center;
+    align-items: center;
+
+    /*items = itens de cada grid
+    self = aplicada no proprio elemento, mas com msma função que items
+    content = conteudo inteiro*/
+}
+
+.container > div {
+    background-color: purple;
+    width: 50%;
+    height: 50%;
+}
