@@ -1,6 +1,62 @@
 .header {
+    height: 1300px;
+    background-image: url('/loopstudios-landing-page-main/code/img/mobile/image-hero.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
 
-    &__logo {
-        background-color: black;
+    @include breakpoint-up(large){
+        height: 1900px;
+        background-image: url('/loopstudios-landing-page-main/code/img/desktop/image-hero.jpg');
+    }
+    
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include breakpoint-up(large){
+            justify-content: space-around;
+        }
+    }
+
+    &__hamburger {
+        cursor: pointer;
+
+        @include breakpoint-up(large){
+            display: none;
+        }
+
+        .span {
+            background-color: white;
+            width: 25px;
+            height: 2px;
+            
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    &__links {
+        display: none;    
+        
+        @include breakpoint-up(large){
+            display: flex;
+            list-style: none;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        li {
+            display: flex;
+        }
+
+        ul:not(:last-child) {
+            margin-right: 10px;
+        }
     }
 }
