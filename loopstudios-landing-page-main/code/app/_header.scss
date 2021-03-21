@@ -1,15 +1,17 @@
 .header {
-    height: 1300px;
-    background-image: url('/loopstudios-landing-page-main/code/img/mobile/image-hero.jpg');
+    position: relative;
+    height: 100rem;
+    width: 100%;
+    background-image: url('/loopstudios-landing-page-main/code/img/desktop/image-hero.jpg');
     background-position: top center;
     background-repeat: no-repeat;
     background-size: contain;
+    overflow: hidden;
 
-    @include breakpoint-up(large){
-        height: 1900px;
-        background-image: url('/loopstudios-landing-page-main/code/img/desktop/image-hero.jpg');
+    @include breakpoint-down(small){
+        background-image: url('/loopstudios-landing-page-main/code/img/mobile/image-hero.jpg');
     }
-    
+
     &__nav {
         display: flex;
         align-items: center;
@@ -20,8 +22,13 @@
         }
     }
 
+    &__logo {
+        z-index: 1;
+    }
+
     &__hamburger {
         cursor: pointer;
+        z-index: 1;
 
         @include breakpoint-up(large){
             display: none;
@@ -31,6 +38,8 @@
             background-color: white;
             width: 25px;
             height: 2px;
+            transition: all 300ms ease-in-out;
+            transform-origin: 3px 1px;
             
             &:not(:last-child) {
                 margin-bottom: 5px;
@@ -49,6 +58,26 @@
         a {
             color: white;
             text-decoration: none;
+
+            &::before {
+                content: "";
+                display: block;
+                position: relative;
+                height: 3px;
+                width: 60%;
+                left: 50%;
+                right: 0;
+                bottom: -40px;
+                background: white;
+                opacity: 0;
+            }
+
+            &:hover {
+
+                &::before {
+                    opacity: 1;
+                }
+            }
         }
 
         li {
@@ -57,6 +86,44 @@
 
         ul:not(:last-child) {
             margin-right: 10px;
+        }
+    }
+
+    &__links-mobile {
+        overflow: hidden;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        width: 100vh;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: black;    
+
+        li {
+            padding-left: 3rem;
+            padding-top: 35vh;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-family: Josefin Sans, sans-serif;
+            font-size: 1.5rem;
+            line-height: 2;
+        }
+    }
+    .show {
+        visibility: visible;
+
+        .span:first-child {
+            transform: rotate(45deg);
+        }
+        .span:nth-child(2) {
+            opacity: 0;
+        }
+        .span:last-child {
+            transform: rotate(-45deg);
         }
     }
 }

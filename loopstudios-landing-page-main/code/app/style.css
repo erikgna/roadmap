@@ -1,4 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+@-webkit-keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 300ms forwards;
+          animation: fade-in 300ms forwards;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  -webkit-animation: fade-out 300ms forwards;
+          animation: fade-out 300ms forwards;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,17 +68,19 @@ h1, h2, h3, a, p {
 }
 
 .header {
-  height: 1300px;
-  background-image: url("/loopstudios-landing-page-main/code/img/mobile/image-hero.jpg");
+  position: relative;
+  height: 100rem;
+  width: 100%;
+  background-image: url("/loopstudios-landing-page-main/code/img/desktop/image-hero.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
+  overflow: hidden;
 }
 
-@media (min-width: 64em) {
+@media (max-width: 39.9375em) {
   .header {
-    height: 1900px;
-    background-image: url("/loopstudios-landing-page-main/code/img/desktop/image-hero.jpg");
+    background-image: url("/loopstudios-landing-page-main/code/img/mobile/image-hero.jpg");
   }
 }
 
@@ -48,8 +103,13 @@ h1, h2, h3, a, p {
   }
 }
 
+.header__logo {
+  z-index: 1;
+}
+
 .header__hamburger {
   cursor: pointer;
+  z-index: 1;
 }
 
 @media (min-width: 64em) {
@@ -62,6 +122,10 @@ h1, h2, h3, a, p {
   background-color: white;
   width: 25px;
   height: 2px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-transform-origin: 3px 1px;
+          transform-origin: 3px 1px;
 }
 
 .header__hamburger .span:not(:last-child) {
@@ -86,6 +150,23 @@ h1, h2, h3, a, p {
   text-decoration: none;
 }
 
+.header__links a::before {
+  content: "";
+  display: block;
+  position: relative;
+  height: 3px;
+  width: 60%;
+  left: 50%;
+  right: 0;
+  bottom: -40px;
+  background: white;
+  opacity: 0;
+}
+
+.header__links a:hover::before {
+  opacity: 1;
+}
+
 .header__links li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,5 +175,48 @@ h1, h2, h3, a, p {
 
 .header__links ul:not(:last-child) {
   margin-right: 10px;
+}
+
+.header__links-mobile {
+  overflow: hidden;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  width: 100vh;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: black;
+}
+
+.header__links-mobile li {
+  padding-left: 3rem;
+  padding-top: 35vh;
+}
+
+.header__links-mobile a {
+  color: white;
+  text-decoration: none;
+  font-family: Josefin Sans, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.header .show {
+  visibility: visible;
+}
+
+.header .show .span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header .show .span:nth-child(2) {
+  opacity: 0;
+}
+
+.header .show .span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 /*# sourceMappingURL=style.css.map */
