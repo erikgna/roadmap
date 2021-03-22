@@ -67,9 +67,13 @@ h1, h2, h3, a, p {
   margin: 3rem 10%;
 }
 
+header {
+  height: 100vh;
+}
+
 .header {
   position: relative;
-  height: 120rem;
+  height: 100%;
   width: 100%;
   background-image: url("/loopstudios-landing-page-main/code/img/desktop/image-hero.jpg");
   background-position: top center;
@@ -78,7 +82,7 @@ h1, h2, h3, a, p {
   overflow: hidden;
 }
 
-@media (max-width: 63.9375em) {
+@media (max-width: 39.9375em) {
   .header {
     background-image: url("/loopstudios-landing-page-main/code/img/mobile/image-hero.jpg");
   }
@@ -229,9 +233,29 @@ h1, h2, h3, a, p {
   z-index: 1;
 }
 
+@media (max-width: 63.9375em) {
+  .hero {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .hero {
+    margin: 8rem 0 0 0;
+    width: 100%;
+  }
+}
+
 .hero__text {
+  width: 90%;
   border: 0.13rem solid white;
-  padding: 2rem;
+  padding: 1.2rem;
+}
+
+@media (max-width: 39.9375em) {
+  .hero__text {
+    margin-left: 5%;
+  }
 }
 
 .hero__text h1 {
@@ -239,5 +263,22 @@ h1, h2, h3, a, p {
   font-size: 4rem;
   font-weight: 300;
   font-family: Josefin Sans, sans-serif;
+}
+
+@media (max-width: 63.9375em) {
+  .hero__text h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .hero__text h1 {
+    font-size: 2.8rem;
+  }
+}
+
+.first {
+  position: relative;
+  background-color: black;
 }
 /*# sourceMappingURL=style.css.map */
