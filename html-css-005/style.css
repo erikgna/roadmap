@@ -177,10 +177,11 @@ footer a {
     color: #00ffff;
 }
 
-@media screen and (min-wdith: 768px){
+@media screen and (min-width: 768px){
     nav {
         flex-direction: row;
         justify-content: space-around;
+        padding: 1rem 0;
     }
     nav ul {
         flex-direction: row;
@@ -188,8 +189,7 @@ footer a {
     }
 
     header {
-        height: 600px;
-        height: 60vh;
+        height: 40vh;
         justify-content: center;
     }
     #sobre {
@@ -209,15 +209,31 @@ footer a {
         text-align: center;
         width: 100%;
     }
+
+    #serviço h3 {
+        padding: 1rem 0;
+    }
+
+    #serviço img {
+        height: 3.5rem;
+    }
+
     #serviço div {
         flex-grow: 1;
         flex-basis: 150px;
         padding: 0 10px;
+        align-items: center;
+        height: 15rem;
     }
     #fotos {
       flex-direction: row;
-      flex-wrap: wrap;  
+      flex-wrap: wrap;
     }
+
+    #fotos img {
+        width: 50%;
+    }
+
     #fotos h2{
         width: 100%;
         text-align: center;
