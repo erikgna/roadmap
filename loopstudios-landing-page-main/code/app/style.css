@@ -67,19 +67,15 @@ h1, h2, h3, a, p {
   margin: 3rem 10%;
 }
 
-header {
-  height: 100vh;
-}
-
 .header {
   position: relative;
-  height: 100%;
   width: 100%;
   background-image: url("/loopstudios-landing-page-main/code/img/desktop/image-hero.jpg");
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   overflow: hidden;
+  padding-bottom: 10rem;
 }
 
 @media (max-width: 39.9375em) {
@@ -278,7 +274,78 @@ header {
 }
 
 .first {
+  padding-top: 10rem;
+}
+
+@media (max-width: 86.9375em) {
+  .first {
+    padding-top: 0;
+  }
+}
+
+.first__content {
+  width: 78rem;
   position: relative;
-  background-color: black;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+@media (max-width: 86.9375em) {
+  .first__content {
+    width: 100%;
+  }
+}
+
+.first__image {
+  position: relative;
+}
+
+@media (max-width: 86.9375em) {
+  .first__image {
+    width: 100%;
+  }
+  .first__image img {
+    width: 90%;
+  }
+}
+
+.first__text {
+  width: 43rem;
+  position: relative;
+  background-color: white;
+  bottom: 15rem;
+  right: -35rem;
+  padding: 5rem 5rem 0 5rem;
+}
+
+@media (max-width: 86.9375em) {
+  .first__text {
+    position: static;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    padding: 0 2rem;
+  }
+}
+
+.first__text h2 {
+  font-size: 3.5rem;
+  font-family: Josefin Sans, sans-serif;
+  font-weight: 300;
+}
+
+@media (max-width: 86.9375em) {
+  .first__text h2 {
+    font-size: 2rem;
+  }
+}
+
+.first__text p {
+  font-family: Alata, sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: grey;
 }
 /*# sourceMappingURL=style.css.map */

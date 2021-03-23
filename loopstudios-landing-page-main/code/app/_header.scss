@@ -1,16 +1,12 @@
-header {
-    height: 100vh;
-}
-
 .header {
     position: relative;
-    height: 100%;
     width: 100%;
     background-image: url('/loopstudios-landing-page-main/code/img/desktop/image-hero.jpg');
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     overflow: hidden;
+    padding-bottom: 10rem;
 
     @include breakpoint-down(small){
         background-image: url('/loopstudios-landing-page-main/code/img/mobile/image-hero.jpg');
