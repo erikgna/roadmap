@@ -1,0 +1,5 @@
+XAMPP, inicializar MySQL e Apache
+localhost/nomedosite
+admin admin
+
+ColourLovers
