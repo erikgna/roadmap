@@ -26,3 +26,12 @@ console.log(tipo)
 
 // operadores lógicos
 
+// and &&
+// or ||
+// not !
+
+let maiorIdade = true;
+let carteiraTrabalho = false;
+let podeAplicar = maiorIdade || carteiraTrabalho;
+
+console.log(podeAplicar)
