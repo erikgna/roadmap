@@ -1,7 +1,7 @@
 console.log('Hello World')
 
 let idade = 19;
-let nome = "erik";
-let altura =  1.71;
+let altura = 1.71;
+const nome = "erik";
 
 console.log(nome, idade, altura)
