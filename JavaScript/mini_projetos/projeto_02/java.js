@@ -1,10 +1,13 @@
-let a = 'vermelho'
-let b = 'azul'
+function maiorNumero(n1, n2){
+    if (n1 > n2){
+        return n1;
+    }
+    else if (n2 > n1){
+        return n2;
+    }
+    else {
+        return 'São iguais'
+    }
+}
 
-let c = a
-
-a = b
-b = c
-
-console.log(a)
-console.log(b)
+console.log(maiorNumero(23, 23))
