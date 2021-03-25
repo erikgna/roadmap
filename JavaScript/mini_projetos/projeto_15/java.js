@@ -4,19 +4,27 @@ const convidados = [
     { nome: 'pedro', convidou: ['rosane', 'jorema'] }
 ]
 
-function checkValidation(param){
-    let nomeChecked = convidados.find(function(nome1){
-        return nome1.nome === param
+function checkValidation(param1, param2) {
+    let achado = convidados.find(function (nome1) {
+        return nome1.nome === param1
     })
-    if (nomeChecked === undefined){
-        console.log('oi')
+    if (achado === undefined) {
+        document.getElementById('permission').innerHTML = 'Você não foi convidado'
     } else {
-        console.log('xau')
+        let a = achado.convidou
+        for (e of a)
+            if (e === param2) {
+                document.getElementById('permission').innerHTML = 'Você foi convidado'
+                break
+            } else {
+                document.getElementById('permission').innerHTML = 'Você não foi convidado'
+                console.log('not ok')
+            }
     }
 }
 
-function buttonFunction(){
+function buttonFunction() {
     const name = document.getElementById('name').value
     const invite = document.getElementById('invite').value
-    checkValidation(name)
+    checkValidation(name, invite)
 }
