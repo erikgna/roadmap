@@ -1,0 +1,19 @@
+.square {
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-color: black;
+}
+
+.grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 618px;
+    height: 618px;
+}
+
+.mole {
+    background-image: url('https://lh3.googleusercontent.com/proxy/dmEae62IMvLVrzcLHvozJnhZWCxWKvu-w3m6OF1H5OSQz8z9t3BkLQp0y1DBcOGoxvpmnodM4vWshdtV3jQ5JWDJgBJTzRoP');
+    background-size: cover;
+}
